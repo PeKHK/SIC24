@@ -1,0 +1,5 @@
+a=int(input('Enter an Integer:'))
+if a%2==0:
+    print('Is the integer odd?::\nFalse');
+else:
+    print('Is the integer odd?::\nTure');
