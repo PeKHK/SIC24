@@ -1,0 +1,7 @@
+a=int(input('Enter\tage: '))
+if a>=20:
+    print('Adult')
+if a<20 and a>=10:
+    print('Youth')
+if a<10:
+    print('Kid')
