@@ -1,0 +1,35 @@
+#input
+print('#'*50)
+print('Shop')
+print('1:Apple(price:5000 won)')
+print('2:Grape(price:6000 won)')
+print('3:Melon(price:8000 won)')
+print('4:Orange(price:2000 won)')
+print('#'*50)
+order=int(input('Enter item number(between 1-4)>>'))
+count=int(input('Enter number of item(between 1-10)>>'))
+
+#process
+if order==1:
+    fruit='Apple'
+    price=5000;
+elif order==2:
+    fruit='Grape'
+    price=6000;
+elif order==3:
+    fruit='Melon'
+    price=8000;
+elif order==4:
+    fruit='Orange'
+    price=2000;
+print('Fruit selected:',fruit)
+print('Price:', price, 'won')
+print('Quantity:',count)
+print('Total price is',price*count,'won')
+
+money=int(input('Insert money please >>>'))
+if money<price*count:
+    print('Not enough money.');
+else:
+    change=money-price*count
+    print(money,'won received. Your change is',change,'won')

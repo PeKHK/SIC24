@@ -1,0 +1,28 @@
+print('1)Addition\t2)Subtration\t3)Multiplication\t4)Division')
+op=int(input('Enter the Desired number of operation:'))
+if op==1:
+    print('Enter two number for operation')
+    a=int(input())
+    b=int(input())
+    print(a,'+',b,'=',a+b);
+elif op==2:
+    print('Enter two number for operation')
+    a=int(input())
+    b=int(input())
+    print(a,'-',b,'=',a-b);
+elif op==3:
+    print('Enter two number for operation')
+    a=int(input())
+    b=int(input())
+    print(a,'*',b,'=',a*b);
+elif op==4:
+    print('Enter two number for operation')
+    a=int(input())
+    b=int(input())
+    if b==0:
+        print("second number can't be 0")
+    else:
+        print(a,'/',b,'=',a/b);
+else:
+    print('Entered an incorrect number')
+    
