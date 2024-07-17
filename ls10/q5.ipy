@@ -1,8 +1,0 @@
-s_list = ['abc', 'bcd', 'bcdefg', 'abba', 'cddc', 'opq']
-longest = s_list[0] 
-
-for item in s_list:
-    if len(item) > len(longest):
-        longest = item
-
-print("The shortest string:", longest)
