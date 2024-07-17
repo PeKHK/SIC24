@@ -1,0 +1,11 @@
+tele_dic={'Chinese restaurant':('010-1234-4500'),'Japanese restaurant':('010-2122-2423'),'Italian':('010-3133-2633')}
+print('previous number')
+for key,value in tele_dic.items():
+    print(key+":",value)
+for key,value in tele_dic.items():
+    addr,review=input(key+'Plaese write address and review of').split()
+    update=(value,addr,review)
+    tele_dic[key]=update
+print('Update number')
+for key,value in tele_dic.items():
+    print(key+":",value)
