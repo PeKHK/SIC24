@@ -1,7 +1,0 @@
-#ຊອກຜົນບວກລວມຂອງຈຳນວນໃດໜຶ່ງ
-s=0
-a=int(input('a:'))
-b=int(input('b:'))
-for i in range(a,b+1):
-    s+=i;
-print('Sum of numbers from ',a,'to',b,':',s)
