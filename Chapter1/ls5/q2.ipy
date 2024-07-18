@@ -1,0 +1,5 @@
+a=int(input('Enter an number:'))
+if a>=0 and a<=100 and a%2==0:
+    print('Is the input an even integer between 0 and 100\ntrue');
+else:
+    print('Is the input an even integer between 0 and 100\nFalse')

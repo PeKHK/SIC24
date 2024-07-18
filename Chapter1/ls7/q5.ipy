@@ -1,0 +1,11 @@
+print('Welcome to yummy restaurant. Here is the menu')
+print('- Burger(enter b)\n- Chicken(enter c)\n- Pizza(enter p)')
+menu=input('Choose a menu(enter b,c,p):')
+if menu=='b':
+    print('You choose burger')
+elif menu=='c':
+    print('You choose chicken')
+elif menu=='p':
+    print('You choose pizza')
+else:
+    print('enter the menu again')

@@ -1,0 +1,2 @@
+print(int('50')+50)
+print(str(50)+'50')
