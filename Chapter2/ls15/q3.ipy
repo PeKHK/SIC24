@@ -1,0 +1,13 @@
+student_tuple=(('211101','David Doe','010-123-1111'),('211102','John Smith','010-123-2222'),('211103',"Jane Carter",'010-123-3333'))
+student_dict={}
+#change tup to dict
+for tup in student_tuple:
+    key=tup[0]
+    value=tuple(tup[1:])
+    student_dict[key]=value
+#display
+for key,value in student_dict.items():
+    print(key,value[0])
+#input
+search=input('Enter student ID number:')
+print(search,'Student is',student_dict[search][0],'and phone number is',student_dict[search][1])

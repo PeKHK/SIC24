@@ -1,0 +1,32 @@
+mylist=[(1,2),(4,5),(4,2),(3,1),(9,4)]
+print(mylist)
+a,b=input('enter two integer:').split(' ')
+a=int(a)
+b=int(b)
+xth=(a,b)
+yth=(b,a)
+dic={
+    
+}
+if xth in mylist:
+    if xth == (1,2):
+        print('There is (1,2) at the first')
+    if xth == (4,5):
+        print('There is (1,2) at the second')
+    if xth == (4,2):
+        print('There is (1,2) at the third')
+    if xth == (3,1):
+        print('There is (1,2) at the fourth')
+    if xth == (9,4):
+        print('There is (1,2) at the fifth')
+elif yth in mylist:
+    if yth == (2,1):
+        print('There is no (2,1) but there is (1,2) at the first')
+    if yth == (5,4):
+        print('There is no (5,4) but there is (4,5) at the second')
+    if yth == (2,4):
+        print('There is no (2,4) but there is (4,2) at the third')
+    if yth == (1,3):
+        print('There is no (1,3) but there is (3,1) at the fourth')
+    if yth == (4,9):
+        print('There is no (4,9) but there is (9,4) at the fifth')

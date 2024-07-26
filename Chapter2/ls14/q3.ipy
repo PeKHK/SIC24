@@ -1,0 +1,33 @@
+items={"Coffee":7,"Pen":3,"Paper cup":2,"Milk":1,"Coke":4,"Book":5}
+
+while True:
+    input_item = int(input('Slect menu 1)check stock 2)warehousing 3)release 4)exit:'))
+    if input_item==1:
+        product=input('[check stock]Enter item:')
+        input_pro=product
+        if input_pro in items:
+            print("Stock",items[product])
+            continue
+        else:
+            print('{} Not in product'.format(input_pro))
+            continue
+    if input_item==2:
+        i,q=input('[Releease]Enter item and quality:').split(" ")
+        q=int(q)
+        if i in items:
+            items[i]+=q
+            continue
+        elif i not in items:
+            items.setdefault(i,q)
+            continue
+    if input_item==3:
+        i,q=input('[Releease]Enter item and quality:').split(" ")
+        q=int(q)
+        if i in items:
+            items[i]-=q
+            continue
+        else:
+            print("No product in stock")
+            continue
+    if input_item==4:
+        break
