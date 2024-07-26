@@ -1,9 +1,0 @@
-menu={'americano':3000,'ice americano':3500,'cappuccino':4000,'latte':4500,'espesso':3600}
-for key in menu:#print dictionary menu
-    print("{:16s}price:{:,} KRW".format(key,menu[key]))
-#input 
-choice = input('Select one menu from the list:')
-if choice in menu.keys():
-    print("{} is {:,} KRW Please make a payment".format(choice,menu[choice]));
-else:
-    print('Sorry. {} is not in the menu'.format(choice))
