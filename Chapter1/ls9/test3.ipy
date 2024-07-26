@@ -1,4 +1,0 @@
-seleted=None#selectd=Null
-while seleted not in ['scissors','rock','paper']:
-    seleted=input('Choose among scissors,rock,paper>')
-print('Chosen value:',seleted)

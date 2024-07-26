@@ -1,4 +1,0 @@
-g=int(input('Enter game score: '))
-print('game_score= ',g)
-if g>=1000:
-    print('You are master')

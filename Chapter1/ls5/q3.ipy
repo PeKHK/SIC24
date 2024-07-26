@@ -1,7 +1,0 @@
-n=int(input('enter 3-digit integer:'))
-print(n)
-n=str(n)
-if (int(n[0])==3):
-    print('True');
-else:
-    print('false');

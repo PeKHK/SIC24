@@ -1,7 +1,0 @@
-total =0
-answer='yes'
-while answer=='yes':
-    number = int(input('Enter the number: '))
-    total=total+number
-    answer=input('Continue?(yes/no): ');
-print('Sum is: ',total)

@@ -1,7 +1,0 @@
-a=int(input("a:"))
-b=int(input("b:"))
-
-A=pow(a,2)
-B=pow(b,2)
-c=(A+B)**(1/2)
-print("Value of hypotenus:",c)

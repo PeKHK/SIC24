@@ -1,4 +1,0 @@
-pi=3.141592
-radius=float(input("Radius:"))
-print("Circumferance of a circle:",2*radius*pi)
-print("Area of a circle:",pow(radius,2)*pi)

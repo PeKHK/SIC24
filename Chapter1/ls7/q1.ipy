@@ -1,5 +1,0 @@
-al=input('Enter the alphabet:')
-if al=='a' or al=='e' or al=='i' or al=='o' or al=='u':
-    print('It is a vowel');
-else:
-    print('It is a consonant');
