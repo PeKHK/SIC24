@@ -1,0 +1,7 @@
+#while with conditon
+under_construction=True
+while under_construction:
+    reponse=input("Is the construction completed?");
+    if reponse=='Yes' or 'yes':
+        under_construction=False
+print('Escaped successfully.')

@@ -1,0 +1,6 @@
+print("a\tn\ta**n")
+a=n=2
+i=7
+while a<i:
+    print(a,"\t",n,"\t",pow(a,2))
+    a=a+1

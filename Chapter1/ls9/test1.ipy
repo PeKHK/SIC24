@@ -1,0 +1,15 @@
+current_pos=0
+days=1
+move_up=7
+move_down=5
+destination=30
+current_pos += move_up
+
+print('day:',days,"Snail's position:",current_pos,'meters')
+while(current_pos<=destination):
+    current_pos-=move_down
+    days+=1
+    current_pos +=move_up
+    print('day:',days,"Snail's position:",current_pos,'meters');
+print()
+print('It took {} days to get out of well'.format(days))

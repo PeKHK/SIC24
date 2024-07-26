@@ -1,0 +1,6 @@
+#input two number in same line, to do 'input a space_bar input b 
+a,b=map(int,input('Write two integer:').split())
+if a%b==0:
+    print(a,'is a multiple of',b)
+else:
+    print(a,'is not a multiple of',b)
