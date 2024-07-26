@@ -1,8 +1,0 @@
-#use recursive to sum number 1 to n
-n=int(input('Enter number:'))
-def sum_num(n):
-    if n<= 1:
-        return n
-    else:
-        return n+sum_num(n-1)
-print(sum_num(n))
