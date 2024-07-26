@@ -1,0 +1,11 @@
+#parindome
+def is_palindrome(st):
+    if len(st)<= 1:
+        return 'This is palindrome'
+    if st[0] != st[-1]:
+        return 'is not palindrome'
+    return is_palindrome(st[1:-1])
+str=input('Enter a string:')
+result=is_palindrome(str)
+print(result)
+

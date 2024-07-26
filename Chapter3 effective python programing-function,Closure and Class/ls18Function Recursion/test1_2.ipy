@@ -1,0 +1,14 @@
+#Fibonacci
+def fibonacci(n):
+    if n<=1:
+        return n
+    else:
+        return(fibonacci(n-1)+fibonacci(n-2))#f_n=f_(n-1)+f(n-2)
+nterms=int(input('How many fibonacci numbers do you want?'))
+#can't find fibo if it is negative
+if nterms<=0:
+    print('error')
+else:
+    print('Fibonacci  sequence:',end=' ')
+    for i in range(nterms):
+        print(fibonacci(i),end=' ')

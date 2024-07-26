@@ -1,0 +1,7 @@
+#try and except
+try:
+    a,b=input('enter teo numbers:').split()
+    result = int(a)/int(b)
+    print(f'{a}/{b}={result}')
+except:
+    print('Check if the numbers are correct')
