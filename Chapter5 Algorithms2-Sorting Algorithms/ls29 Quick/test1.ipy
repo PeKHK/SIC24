@@ -1,0 +1,29 @@
+#quick sort randomized pivot
+from random import randint
+def quicksort2(S,low,high):
+    if low<high:
+        pivotpoint=partition2(S,low,high)
+        quicksort2(S,low,pivotpoint-1)
+        quicksort2(S,pivotpoint+1,high)
+
+
+
+def partition2(S,low,high):
+    rand=randint(low,high)
+    S[low],S[rand]=S[rand],S[low]
+    pivot,left,right=S[low],low,high
+    print(f"{S},{left},{right},pivot ={pivot}")
+
+    while left < right:
+        while left < high and S[left] <= pivot:
+            left += 1
+        while left > low and pivot <= S[right]:
+            right-=1
+        if left<right:
+            S[left],S[right]=S[right],S[left]
+    S[low],S[right]=S[right],S[low]
+    return right
+
+S=[25,20,22,12,13,15,10]
+quicksort2(S,0,len(S)-1)
+print(S)

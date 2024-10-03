@@ -1,0 +1,22 @@
+from queue import PriorityQueue
+def multiway_merge(list_of_lists):
+    pq=PriorityQueue()
+    for i,lst in enumerate(list_of_lists):
+        if len(lst)>0:
+            pq.put((lst[0],i,0))
+    merged=[]
+    while not pq.empty():
+        element,lst_index,elem_index=pq.get()
+        merged.append(element)
+        if elem_index<len(list_of_lists[lst_index])-1:
+            pq.put((list_of_lists[lst_index][elem_index+1],lst_index,elem_index+1))
+    return merged
+
+N=int(input("Input the number of list:"))
+list_of_nums=[]
+for i in range(N):
+    nums=list(map(int,input("Input a list of numbers:").split()))
+    print(nums)
+    list_of_nums.append(nums)
+sorted=multiway_merge(list_of_nums)
+print("Merged in to: ",sorted)
