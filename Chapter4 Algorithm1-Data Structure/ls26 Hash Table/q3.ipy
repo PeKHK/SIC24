@@ -1,0 +1,16 @@
+def int_to_roman(num):
+    result=""
+    for i in table:
+        while num>=i:
+            result+=table[i]
+            num-=i
+            '''if num greater than i we add i to result and sumtract i from num 
+                    ex:loop1 num=1999>=i=1000 add M to result and subtract 1000 from 1999 so now num=999 and next,
+                        if num<i program is skipped ex:loop3 num=99>=i=500 is not correct so skipped'''
+            print(f"result:{result}")
+    return result
+table={1000:"M",900:"CM",500:"D",400:"CD",
+       100:"C",90:"XC",50:"L",40:"XL",
+       10:"X",9:"IX",5:"V",4:"XI",1:"I"}
+num=int(input("Input a number:"))
+print(int_to_roman(num))

@@ -1,0 +1,14 @@
+#roman number to arabic number
+def roman_to_int(str):
+    result=0
+    for i in range(len(str)-1):
+        print(f"result:{result}")
+        if table[str[i]]<table[str[i+1]]:#if str behind bigger than str present,so minus to present number
+            result-=table[str[i]]
+        else:
+            result+=table[str[i]]#if str behind smaller than str present,so plush to present number
+    return result+table[str[-1]]#return the last str
+table={'I':1,'V':5,'X':10,'L':50,'C':100,'D':500,'M':1000}
+roman=input("Input number:")
+number=roman_to_int(roman)
+print(number)

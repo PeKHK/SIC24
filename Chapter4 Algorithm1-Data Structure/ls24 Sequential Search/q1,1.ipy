@@ -1,0 +1,16 @@
+def find_two(nums):
+    x=y=0
+    for i in range(1,len(nums)):
+        print(f"Loop{i}")
+        print(f"x pos[{x}]={nums[x]} < i pos[{i}]={nums[i]}")
+        print(f"value of x={nums[x]}")
+        print(f"y pos[{y}]={nums[y]} > i pos[{i}]={nums[i]}")
+        print(f"value of y={nums[y]}\n")
+        if nums[x]<nums[i]:#find max
+            x=i  
+        elif nums[y]>nums[i]:#find min
+            y=i
+    return x,y
+nums=[11,37,45,26,59,28,17,53]
+i,j=find_two(nums)
+print(nums[i],nums[j])

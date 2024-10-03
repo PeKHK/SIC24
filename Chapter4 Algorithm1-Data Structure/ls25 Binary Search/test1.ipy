@@ -1,0 +1,17 @@
+#find the heighest of floor the egg not break
+def do_experiment(floor,breaking):
+    return floor >= breaking
+def find_highest_sfe_floor2(height,breaking):
+    low,high=1,height
+    while low<high:
+        mid=(low+high)//2
+        print("low:",low ,",high:",high ,",mid:",mid)
+        if do_experiment(mid,breaking):
+            high=mid
+        else:
+            low=mid+1
+    return low-1
+height=int(input("Input the number of floors:"))
+breaking=int(input("Input the first breaking floor:"))
+floor=find_highest_sfe_floor2(height,breaking)
+print(f"Your egg will safe till the {floor}-th floor")

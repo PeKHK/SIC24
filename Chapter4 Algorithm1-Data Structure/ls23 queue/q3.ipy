@@ -1,0 +1,25 @@
+#class queue
+class Deque:
+    def __init__(self):
+        self.queue=[]
+    def is_empty(self):
+        return True if len(self.queue)==0 else False
+    def size(self):
+        return len(self.queue)
+    def Fadd_first(self,item):#add an itm to the front of the queue
+        self.queue.insert(0,item)
+    def Fremove_first(self):#remove and return the item from the front
+        return None if self.is_empty() else self.queue.pop(0)
+    def Radd_first(self,item):#add an itm to the rear of the queue
+        self.queue.append(item)
+    def Rremove_first(self):#remove and return the item from the rear
+        return None if self.is_empty() else self.queue.pop(-1)
+queue=Deque()
+queue.Fadd_first(1)
+queue.Fadd_first(2)
+queue.Radd_first(3)
+queue.Radd_first(4)
+queue.Fadd_first(5)
+queue.Radd_first(6)
+queue.Fremove_first()
+print(queue.queue)
