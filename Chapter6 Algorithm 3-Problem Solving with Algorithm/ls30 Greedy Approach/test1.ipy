@@ -1,0 +1,15 @@
+#code exchange coin by greedy
+def coin_change(coins,amount):
+    changes=[]
+    largest=0
+    while amount > 0:       
+        if amount < coins[largest]:
+            largest += 1
+        else:
+            changes.append(coins[largest])
+            amount -= coins[largest]
+    return changes
+coins=[500,100,50,10]
+amount=int(input("Input the amount:"))
+changes=coin_change(coins,amount)
+print(changes,len(changes))

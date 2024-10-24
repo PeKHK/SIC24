@@ -1,0 +1,13 @@
+def coin_change2(coins,amount):
+    changes=[]
+    for coin in coins:
+        while amount >= coin:
+            amount -= coin
+            changes.append(coin)
+    return changes
+coins=list(map(int,input("Input the coins:").split()))
+coins.sort(reverse=True)
+print(coins)
+amount=int(input("Input the amount:"))
+changes=coin_change2(coins,amount)
+print(changes,len(changes))
