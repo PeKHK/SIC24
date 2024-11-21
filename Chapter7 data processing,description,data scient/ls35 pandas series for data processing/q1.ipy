@@ -1,0 +1,32 @@
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+population_2020={
+    'Tokyo':37339804,
+    'Delhi':31181376,
+    'Shanghai':27795702
+}
+population_2021={
+    'Tokyo':37393128,
+    'Delhi':30290936,
+    'Shanghai':27058480
+}
+city_area={
+    'Tokyo':2194,
+    'Delhi':1484,
+    'Shanghai':6340
+}
+s_2020=pd.Series(population_2020)
+s_2021=pd.Series(population_2021)
+s_area=pd.Series(city_area)
+
+growth=s_2020-s_2021
+print(growth)
+
+x=growth.index
+y=growth.values
+
+plt.figure(figsize=(13,6))
+plt.xticks(rotation='vartical',size=10)
+plt.barh(x,y)
+plt.show()

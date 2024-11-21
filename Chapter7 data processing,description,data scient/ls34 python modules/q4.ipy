@@ -1,0 +1,81 @@
+from turtle import *
+from datetime import datetime
+import time  # Make sure to import the time module
+
+def jump(distanz, winkel=0):
+    penup()
+    right(winkel)
+    forward(distanz)
+    left(winkel)
+    pendown()
+
+def hand(laenge, spitze):
+    fd(laenge * 1.15)
+    rt(90)
+    fd(spitze)
+    lt(120)
+    fd(spitze)
+    lt(120)
+    fd(spitze)
+    lt(120)
+    fd(spitze / 2.0)
+
+def make_hand_shape(name, laenge, spitze):
+    reset()
+    jump(-laenge * 0.15)
+    begin_poly()
+    hand(laenge, spitze)
+    end_poly()
+    hand_from = get_poly()
+    register_shape(name, hand_from)
+
+def clockface(radius):
+    reset()
+    pensize(7)
+    for i in range(12):
+        jump(radius)
+        fd(25)
+        jump(-radius - 25)
+        rt(30)
+
+def main():
+    bgcolor("lightblue")
+    mode("logo")
+    ht()
+    tracer(False)
+    
+    clockface(200)
+    
+    make_hand_shape("hour_hand", 100, 25)
+    make_hand_shape("minute_hand", 150, 25)
+    make_hand_shape("second_hand", 180, 15)
+    
+    hour_hand = Turtle()
+    hour_hand.shape("hour_hand")
+    hour_hand.color("black", "black")
+    
+    minute_hand = Turtle()
+    minute_hand.shape("minute_hand")
+    minute_hand.color("blue", "blue")
+    
+    second_hand = Turtle()
+    second_hand.shape("second_hand")
+    second_hand.color("red", "red")
+    
+    update()
+    
+    while True:
+        now = datetime.now()
+        hour = now.hour % 12
+        minute = now.minute
+        second = now.second
+        
+        hour_hand.setheading(30 * hour + 0.5 * minute)
+        minute_hand.setheading(6 * minute + 0.1 * second)
+        second_hand.setheading(6 * second)
+        
+        update()
+        time.sleep(1)
+
+if __name__ == "__main__":
+    main()

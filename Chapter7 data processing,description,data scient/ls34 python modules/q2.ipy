@@ -1,0 +1,21 @@
+#use timedelta
+from datetime import datetime, timedelta
+def calculate_anniversaries(start_date):
+    # Calculate different anniversaries
+    day_100 = start_date + timedelta(days=100)  
+    # Print the results
+    print(f"100-Day Anniversary: {day_100.strftime('%B %d, %Y')}") 
+def main():
+    print("Special Date Anniversary Calculator")
+    print("----------------------------------")
+    # Get input from user
+    while True:
+        try:
+            date_str = input("Enter your special date (YYYY-MM-DD): ")
+            special_date = datetime.strptime(date_str, '%Y-%m-%d')
+            break
+        except ValueError:
+            print("Invalid date format. Please use YYYY-MM-DD format.")
+    calculate_anniversaries(special_date)
+if __name__ == "__main__":
+    main()

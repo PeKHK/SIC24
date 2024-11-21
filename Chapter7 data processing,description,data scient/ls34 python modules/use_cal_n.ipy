@@ -1,0 +1,11 @@
+#import cal_n
+import cal_n
+def main():
+    n=int(input("Enter a desired number for calculation:"))
+
+    sum_v=cal_n.sum_n(n)
+    print("the sum of adding from 1 untill",n,"is:",sum_v)
+
+    sum_vv=cal_n.sum_n2(n)
+    print("the sum of adding consecutively from 1 untill",n,"is:",sum_vv)
+main()
